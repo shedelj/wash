@@ -1,0 +1,28 @@
+<template name="newrelease">
+  {{#if isInRole 'admin'}}
+  <div class="object-container">
+    <div class="row">
+        <input type="text" id="new-release-name" value="{{release.name}}" placeholder="Name"/>
+        <hr>
+        <div class="row">
+          <div class="small-4 columns">
+            <div align="center">Photo</div>
+            <input type="file" id="new-release-picture"/>
+          </div>
+          <div class="medium-8 columns">
+            <textarea id="new-release-description" placeholder="Release Description"> {{release.description}} </textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-8 columns"></div>
+          <div class="medium-4 columns">  
+            <button class="button small success" id="new-release-submit">Submit</button>
+            <button class="button small alert" id="new-release-delete">Delete</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  {{else}}
+    Lost?
+  {{/if}}
+</template>

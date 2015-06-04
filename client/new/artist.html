@@ -1,0 +1,30 @@
+<template name="newartist">
+  {{#if isInRole 'admin'}}
+  <div class="object-container">
+    <div class="row">
+        <input type="text" id="new-artist-name" value="{{artist.name}}" placeholder="Name"/>
+        <hr>
+        <div class="row">
+          <div class="medium-4 columns">
+            <img src="{{imageUrl}}"/>
+            <div align="center">Photo</div>
+            <input type="file" id="new-artist-picture"/>
+          </div>
+          <div class="medium-8 columns">
+            <textarea id="new-artist-description" placeholder="Artist Description"> {{artist.description}} </textarea>
+            <input type="text" id="new-artist-sc" value="{{artist.soundcloud}}" placeholder="SoundCloud"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-8 columns"></div>
+          <div class="medium-4 columns">  
+            <button class="button small success" id="new-artist-submit">Submit</button>
+            <button class="button small alert" id="new-artist-delete">Delete</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  {{else}}
+    Lost?
+  {{/if}}
+</template>

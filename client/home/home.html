@@ -1,0 +1,24 @@
+<template name="home">
+	<div class="main-container">
+		{{#each items}}
+		<div class="object-container">
+			<div class="row">
+				{{#if isInRole 'admin'}}
+				<a href="/edit/artist/{{_id}}" class="button secondary tiny edit-button"> Edit </a>
+				{{/if}}
+				<h4><a href="http://soundcloud.com/{{soundcloud}}">{{name}}</a></h4>
+
+				<hr>
+				<div class="row">
+					<div class="medium-4 columns">
+						<img src="{{imageUrl}}"/>
+					</div>
+					<div class="medium-8 columns">
+						{{description}}
+					</div>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</template>

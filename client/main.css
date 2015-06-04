@@ -1,0 +1,55 @@
+
+
+.logo-bar header-title {
+	font-family: 'LIGHTWEIGHT-SERIF', 'Georgia', serif;
+	font-size: 10vw;
+}
+
+.main-header {
+	background-color: #fff;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	min-height: 75px;
+}
+
+.main-logo {
+	text-align: center;
+}
+
+.nav-bar {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	float:center;
+}
+
+.nav-links {
+	font-size: 150%;
+	padding: 0 10px 0 10px;
+}
+
+.main-container {
+	margin:0px;
+}
+
+.object-container {
+	margin:0 5em 5em 5em;
+}
+
+.edit-button {
+	float: right;
+	margin-bottom: .5rem;
+}
+
+.new-item {
+	margin:	1em;
+	text-align: center;
+}
+
+hr {
+	margin: .5rem 0 .5rem;
+}
+
+a {
+	color: #000;
+}

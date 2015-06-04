@@ -1,0 +1,28 @@
+<template name="releases">
+	<div class="main-container">
+		{{#if isInRole 'admin'}}
+			<div class="new-item">
+				<a class="new-item button success" href="/new/release">New Release</a>
+			</div>
+		{{/if}}
+		{{#each releases}}
+		<div class="object-container">
+			<div class="row">
+				{{#if isInRole 'admin'}}
+				<a href="/edit/release/{{_id}}" class="button secondary tiny edit-button"> Edit </a>
+				{{/if}}
+				<h4>{{name}}</h4>
+				<hr>
+				<div class="row">
+					<div class="medium-4 columns">
+						<img src="{{imageUrl}}"/>
+					</div>
+					<div class="medium-8 columns">
+						{{description}}
+					</div>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</template>
