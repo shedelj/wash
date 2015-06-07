@@ -26,6 +26,7 @@ Template.newrelease.events({
       name: document.getElementById("new-release-name").value,
       description: document.getElementById("new-release-description").value,
       date_modified: Date.now(),
+      type: "release",
     }
 
     var files = document.getElementById("new-release-picture").files;

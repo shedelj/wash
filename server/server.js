@@ -66,4 +66,29 @@ Meteor.methods({
 			delete release._id;
 		}
 	},
+
+	newEvent: function (eventT) {
+		var user = Meteor.user();
+		if (!user || !user.roles) {
+			throw new Meteor.Error(403, "Access Denied");
+		}
+
+		if (eventT._id) {
+			Events.remove({_id:eventT._id});
+			delete eventT._id;
+		}
+		Events.insert(eventT);
+	},
+
+	deleteEvent: function (eventT) {
+		var user = Meteor.user();
+		if (!user || !user.roles) {
+			throw new Meteor.Error(403, "Access Denied");
+		}
+		if (eventT._id) {
+			eventT.remove({_id:eventT._id});
+			delete eventT._id;
+		}
+	},
+
 });

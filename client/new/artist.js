@@ -26,7 +26,8 @@ Template.newartist.events({
       description: document.getElementById("new-artist-description").value,
       soundcloud: document.getElementById("new-artist-sc").value,
       date_modified: Date.now(),
-    }
+      type: "artist",
+      }
 
     var files = document.getElementById("new-artist-picture").files;
 

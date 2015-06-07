@@ -1,24 +1,32 @@
 <template name="home">
 	<div class="main-container">
-		{{#each items}}
 		<div class="object-container">
 			<div class="row">
-				{{#if isInRole 'admin'}}
-				<a href="/edit/artist/{{_id}}" class="button secondary tiny edit-button"> Edit </a>
-				{{/if}}
-				<h4><a href="http://soundcloud.com/{{soundcloud}}">{{name}}</a></h4>
-
+				<h4>Artist Spotlight: {{spotlight.name}}</h4>
 				<hr>
 				<div class="row">
 					<div class="medium-4 columns">
-						<img src="{{imageUrl}}"/>
+						<img src="{{spotlight.imageUrl}}"/>
 					</div>
 					<div class="medium-8 columns">
-						{{description}}
+						{{spotlight.description}}
 					</div>
 				</div>
 			</div>
 		</div>
-		{{/each}}
+		<div class="object-container">
+			<div class="row">
+				<h4>Event Spotlight: {{event.name}}</h4>
+				<hr>
+				<div class="row">
+					<div class="medium-4 columns">
+						<img src="{{event.imageUrl}}"/>
+					</div>
+					<div class="medium-8 columns">
+						{{event.description}}
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>

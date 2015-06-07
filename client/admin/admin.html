@@ -1,9 +1,14 @@
 <template name="admin">
 <div>
 	<div class="row">
-		<div style="margin: 0 auto">
+		<div class="medium-5 columns"></div>
+		<div class="medium-2 columns">
 			{{>loginButtons}}
 		</div>
+		<div class="medium-5 columns"></div>
 	</div>
+
+  {{#if isInRole 'admin'}}
+  {{/if}}
 </div>
 </template>

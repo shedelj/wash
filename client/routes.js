@@ -26,6 +26,14 @@ Router.route("/new/release", function () {
 	this.render('newrelease');
 });
 
+Router.route("/new/event", function () {
+	this.render("newevent");
+});
+
+Router.route("/edit/event/:_id", function () {
+	this.render("newevent");
+});
+
 Router.route("/edit/artist/:_id", function () {
   this.render("newartist");
 });

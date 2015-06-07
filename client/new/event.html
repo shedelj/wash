@@ -1,0 +1,29 @@
+<template name="newevent">
+  {{#if isInRole 'admin'}}
+  <div class="object-container">
+    <div class="row">
+        <input type="text" id="new-event-name" value="{{event.name}}" placeholder="Name"/>
+        <hr>
+        <div class="row">
+          <div class="medium-4 columns">
+            <img src="{{event.imageUrl}}"/>
+            <div align="center">Photo</div>
+            <input type="file" id="new-event-picture" multiple/>
+          </div>
+          <div class="medium-8 columns">
+            <textarea id="new-event-description" placeholder="Event Description"> {{event.description}} </textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="medium-8 columns"></div>
+          <div class="medium-4 columns">  
+            <button class="button small success" id="new-event-submit">Submit</button>
+            <button class="button small alert" id="new-event-delete">Delete</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  {{else}}
+    Lost?
+  {{/if}}
+</template>

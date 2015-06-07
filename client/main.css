@@ -46,6 +46,15 @@
 	text-align: center;
 }
 
+.footer-align {
+	margin: 0em 7em 0em 7em;
+	text-align: center;
+}
+
+footer {
+	margin: 1em;
+}
+
 hr {
 	margin: .5rem 0 .5rem;
 }
