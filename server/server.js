@@ -2,7 +2,17 @@ Meteor.startup(function () {
 	//
 });
 
-
+if (Meteor.settings.AWS){
+  // These values are defined in settings.json
+  S3.config = {
+      key: Meteor.settings.AWS.accessKeyId,
+      secret: Meteor.settings.AWS.secretAccessKey,
+      bucket: Meteor.settings.AWS.bucket
+  }
+}
+else{
+  console.warn ("AWS settings missing, did you run with 'meteor --settings ./settings.json'?");
+}
 
 Accounts.onCreateUser(function(options, user) {
   if(Meteor.users.find().fetch().length == 0){
